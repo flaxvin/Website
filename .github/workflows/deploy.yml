@@ -1,10 +1,9 @@
-name: Publish site
+name: Deploy site
 
-# GitHub Pages for this repository serves the `gh-pages` branch with the custom
-# domain flaxvin.tech. `main` is the working branch; this job mirrors it to
-# `gh-pages` on every push, which is what triggers the Pages rebuild.
-#
-# Nothing is compiled — the site is static HTML served from the repository root.
+# The site is static HTML served from the repository root — nothing is compiled.
+# GitHub Pages is configured with build type "GitHub Actions", so this workflow
+# is what publishes it. The CNAME file at the root pins the custom domain
+# flaxvin.tech and is included in the uploaded artifact.
 
 on:
   push:
@@ -12,26 +11,31 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 concurrency:
-  group: publish
+  group: pages
   cancel-in-progress: false
 
 jobs:
-  publish:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
         with:
-          fetch-depth: 0
+          path: .
 
-      - name: Mirror main to gh-pages
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git checkout -B gh-pages
-          git push --force origin gh-pages
-
-      - name: Summary
-        run: echo "Published to https://flaxvin.tech/" >> "$GITHUB_STEP_SUMMARY"
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

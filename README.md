@@ -34,12 +34,13 @@ Each page is the single source for its subject; content is not duplicated betwee
 
 ## Deployment
 
-The site is served by GitHub Pages from the `gh-pages` branch at the custom domain
-**flaxvin.tech** (the `CNAME` file pins it).
+The site is served by GitHub Pages at the custom domain **flaxvin.tech**, which the `CNAME`
+file pins. Pages build type is "GitHub Actions".
 
-`main` is the working branch. Pushing to `main` runs `.github/workflows/deploy.yml`, which mirrors
-it to `gh-pages` and triggers the Pages rebuild. There is nothing to compile — edit the HTML,
-commit to `main`, and the change is live in a minute or two.
+Pushing to `main` runs `.github/workflows/deploy.yml`, which uploads the repository root and
+deploys it. There is nothing to compile — edit the HTML, commit to `main`, and the change is live
+in a minute or two. GitHub's CDN caches for ten minutes, so allow for that before assuming a
+change has not landed.
 
 ## Privacy
 
