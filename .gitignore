@@ -1,0 +1,12 @@
+# Local working files — not part of the deployed site
+.claude/
+NOTES.md
+
+# Brand and marketing source assets live outside the website repo.
+# Only the icons the pages actually request are tracked (see assets/logo/ below).
+assets/BRAND.md
+assets/LINKEDIN.md
+assets/social/
+assets/templates/
+assets/logo/*
+!assets/logo/apple-touch-icon.png
