@@ -364,7 +364,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
         <li>No IndexedDB, cache manifests or service workers</li>
         <li>No device or browser fingerprinting</li>
       </ul>
-      <p class="muted small" style="margin:16px 0 0">You can confirm this yourself: open your browser&rsquo;s developer tools on any page of this site and inspect the Application or Storage tab. It will be empty.</p></div>
+      <p class="muted small" style="margin:16px 0 0">You can confirm this yourself: open your browser&rsquo;s developer tools on any page of this site and inspect the Application or Storage tab. It will be empty &mdash; including after the third-party scripts described below have run.</p></div>
       <div class="card reveal"><h3>Why there is no banner</h3>
         <p class="muted small">Consent banners exist because sites place non-essential cookies before you have agreed to them. This site places none, essential or otherwise, so there is no consent to collect and no preference to store.</p>
         <p class="muted small" style="margin:0">A banner that stored your dismissal of the banner would itself be the only cookie on the site. We would rather not have one.</p>
@@ -375,10 +375,10 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
 
 <section class="section section--tint">
   <div class="wrap">
-    <div class="sec-head reveal"><p class="eyebrow">External requests</p><h2>The one request that leaves your browser.</h2></div>
+    <div class="sec-head reveal"><p class="eyebrow">External requests</p><h2>What leaves your browser, and why none of it is a cookie.</h2></div>
     <div class="card reveal">
-      <p class="muted small">Each page loads two typefaces from Google Fonts (<code>fonts.googleapis.com</code> and <code>fonts.gstatic.com</code>). Google states that Google Fonts sets no cookies, but serving the files does disclose your IP address and user-agent to Google, as any request to any server does. We receive nothing from it.</p>
-      <p class="muted small" style="margin:0">Beyond that, the pages are self-contained: the stylesheet and script are inline, every graphic is inline SVG, and there are no embedded maps, videos, chat widgets, social buttons or tag managers. Full detail is in our <a href="privacy.html">privacy notice</a>.</p>
+      <p class="muted small">Each page loads two typefaces from Google Fonts (<code>fonts.googleapis.com</code> and <code>fonts.gstatic.com</code>). Google states that Google Fonts sets no cookies, but serving the files does disclose your IP address and user-agent to Google, as any request to any server does. We receive nothing from it.</p><p class="muted small">The network in front of this site, Cloudflare, adds two scripts of its own to every page: its Web Analytics beacon and an email-address obfuscator. Neither writes a cookie, and neither stores anything in your browser &mdash; which is why this page can still say what it says above. Both are set out in detail in our <a href="privacy.html">privacy notice</a>, including what the analytics reports back to us.</p>
+      <p class="muted small" style="margin:0">Our own markup adds nothing further: the stylesheet and script are inline, every graphic is inline SVG, and there are no embedded maps, videos, chat widgets, social buttons or tag managers.</p>
     </div>
   </div>
 </section>

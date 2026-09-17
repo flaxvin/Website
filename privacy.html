@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy — Flaxvin Technologies</title>
-<meta name="description" content="Flaxvin Technologies privacy notice — no cookies, no analytics, no tracking. We hold only the email you choose to send us.">
+<meta name="description" content="Flaxvin Technologies privacy notice — no cookies, no tracking, no analytics of our own. We hold only the email you choose to send us.">
 <link rel="canonical" href="https://flaxvin.tech/privacy.html">
 <meta name="theme-color" content="#06090F">
 <meta property="og:title" content="Privacy — Flaxvin Technologies">
-<meta property="og:description" content="Flaxvin Technologies privacy notice — no cookies, no analytics, no tracking. We hold only the email you choose to send us.">
+<meta property="og:description" content="Flaxvin Technologies privacy notice — no cookies, no tracking, no analytics of our own. We hold only the email you choose to send us.">
 <meta property="og:site_name" content="Flaxvin Technologies">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://flaxvin.tech/og-image.png">
@@ -347,8 +347,8 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
   <div class="wrap">
     <p class="crumb"><a href="index.html">Home</a> &rsaquo; Privacy</p>
     <p class="eyebrow">Privacy notice</p>
-    <h1>We do not collect anything from visitors to this site.</h1>
-    <p class="lead">This site has no cookies, no analytics, no tracking pixels and no advertising. Browsing it creates no record we hold about you. The only personal data Flaxvin Technologies holds is what you choose to send us by email.</p>
+    <h1>We collect nothing that identifies you.</h1>
+    <p class="lead">This site has no cookies, no tracking pixels and no advertising, and we have installed no analytics of our own. Browsing it creates no record that identifies you to us. The only personal data Flaxvin Technologies holds is what you choose to send us by email.</p>
     <p class="small muted" style="margin-top:18px">Effective 17 September 2026.</p>
   </div>
 </section>
@@ -359,13 +359,14 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
     <div class="grid g2">
       <div class="card reveal"><h3>What we do not do</h3><ul class="chk">
         <li>No cookies of any kind, first-party or third-party</li>
-        <li>No analytics &mdash; no Google Analytics, Plausible, Fathom or equivalent</li>
-        <li>No tracking pixels, beacons or advertising networks</li>
+        <li>No analytics product installed by us &mdash; no Google Analytics, Plausible, Fathom or equivalent</li>
+        <li>No advertising networks and no cross-site tracking</li>
         <li>No session recording, heatmaps or device fingerprinting</li>
         <li>No <code>localStorage</code> or <code>sessionStorage</code> use</li>
         <li>No account, no login, no visitor profile</li>
         <li>No sale, rental or sharing of personal data with anyone</li>
-      </ul></div>
+      </ul>
+      <p class="form-note" style="margin-top:16px">One exception qualifies the second point: the network that serves this site runs its own cookieless analytics, which we did not add to the pages and cannot see identifying data from. It is described in full below.</p></div>
       <div class="card reveal"><h3>What we do hold</h3><ul class="chk">
         <li>Email you send us, and our replies to it</li>
         <li>Documents you send us as part of an enquiry or engagement</li>
@@ -397,12 +398,13 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
 
 <section class="section">
   <div class="wrap">
-    <div class="sec-head reveal"><p class="eyebrow">Third parties</p><h2>One external request, and it is fonts.</h2></div>
+    <div class="sec-head reveal"><p class="eyebrow">Third parties</p><h2>Two third parties, and what each receives.</h2></div>
     <div class="grid g2">
       <div class="card reveal"><h3>Google Fonts</h3>
         <p class="muted small">Every page loads two typefaces from <code>fonts.googleapis.com</code> and <code>fonts.gstatic.com</code>. To serve those files Google receives your IP address and browser user-agent string, as it would for any request to any server. Google states that Google Fonts sets no cookies. We receive nothing from this request and have no access to any record of it.</p>
-        <p class="muted small" style="margin:0">This is the only third-party request the site makes. We are aware it is the one gap in an otherwise self-contained page, and self-hosting the font files removes it entirely.</p>
+        <p class="muted small" style="margin:0">Self-hosting the font files would remove this request entirely.</p>
       </div>
+      <div class="card reveal"><h3>Cloudflare</h3><p class="muted small">This site is served through Cloudflare, which sits in front of our host. Cloudflare injects two scripts of its own into every page at the edge &mdash; they are not in our source files, and they do not appear if you fetch the page without a browser.</p><p class="muted small"><strong>Cloudflare Web Analytics</strong> (<code>static.cloudflareinsights.com</code>, reporting to <code>/cdn-cgi/rum</code>) records page views and performance timings. It is cookieless: it stores nothing in your browser and does not follow you to other sites. We see aggregate counts only &mdash; visits per page, load times, broad country and browser breakdowns &mdash; never an individual visitor.</p><p class="muted small" style="margin:0"><strong>Email obfuscation</strong> (<code>/cdn-cgi/scripts/&hellip;/email-decode.min.js</code>) scrambles the email addresses printed on our pages so that address-harvesting bots cannot read them, and unscrambles them for you. It collects nothing.</p></div>
       <div class="card reveal"><h3>Links that leave this site</h3>
         <p class="muted small">Our <a href="products.html">products page</a> links to <code>pathayam.app</code> and to GitHub. Those are ordinary links: nothing is sent to either site unless you click through, and once you do you are on their infrastructure under their privacy terms, not ours.</p>
         <p class="muted small" style="margin:0">We embed no maps, no video players, no chat widgets, no social buttons and no third-party scripts of any kind.</p>
@@ -415,7 +417,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
   <div class="wrap">
     <div class="sec-head reveal"><p class="eyebrow">Hosting</p><h2>Server logs are not ours to keep.</h2></div>
     <div class="card reveal">
-      <p class="muted small">This is a static site. Like every web server, the host that serves it records requests &mdash; typically IP address, timestamp, the file requested and the user-agent string &mdash; as part of operating and protecting the service. We do not export those logs, do not analyse them, and do not combine them with anything else. They expire on the host&rsquo;s own schedule.</p>
+      <p class="muted small">This is a static site published with GitHub Pages and delivered through Cloudflare. Like every web server, both record requests &mdash; typically IP address, timestamp, the file requested and the user-agent string &mdash; as part of operating and protecting the service. We do not export those logs, do not analyse them, and do not combine them with anything else. They expire on each provider&rsquo;s own schedule.</p>
       <p class="muted small" style="margin:0">We keep no server-side record of visitors ourselves.</p>
     </div>
   </div>
