@@ -1,7 +1,7 @@
 # Flaxvin Technologies — website
 
 The public website for Flaxvin Technologies, served at
-**https://flaxvin.github.io/Website/**
+**https://flaxvin.tech/**
 
 Static HTML. No build step, no framework, no dependencies to install. Each page is a single
 self-contained file with its CSS and JavaScript inlined; the only external request is the
@@ -34,8 +34,12 @@ Each page is the single source for its subject; content is not duplicated betwee
 
 ## Deployment
 
-Pushing to `main` triggers `.github/workflows/deploy.yml`, which publishes the repository root
-to GitHub Pages. There is nothing to build.
+The site is served by GitHub Pages from the `gh-pages` branch at the custom domain
+**flaxvin.tech** (the `CNAME` file pins it).
+
+`main` is the working branch. Pushing to `main` runs `.github/workflows/deploy.yml`, which mirrors
+it to `gh-pages` and triggers the Pages rebuild. There is nothing to compile — edit the HTML,
+commit to `main`, and the change is live in a minute or two.
 
 ## Privacy
 

@@ -1,4 +1,10 @@
-name: Deploy site to GitHub Pages
+name: Publish site
+
+# GitHub Pages for this repository serves the `gh-pages` branch with the custom
+# domain flaxvin.tech. `main` is the working branch; this job mirrors it to
+# `gh-pages` on every push, which is what triggers the Pages rebuild.
+#
+# Nothing is compiled — the site is static HTML served from the repository root.
 
 on:
   push:
@@ -6,30 +12,26 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
-  group: pages
+  group: publish
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
         with:
-          enablement: true
-      - name: Upload site
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
+          fetch-depth: 0
+
+      - name: Mirror main to gh-pages
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B gh-pages
+          git push --force origin gh-pages
+
+      - name: Summary
+        run: echo "Published to https://flaxvin.tech/" >> "$GITHUB_STEP_SUMMARY"

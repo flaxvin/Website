@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://flaxvin.github.io/Website/sitemap.xml
+Sitemap: https://flaxvin.tech/sitemap.xml
