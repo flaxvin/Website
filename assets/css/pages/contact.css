@@ -7,10 +7,10 @@
 .enquiry .req { color: var(--color-muted); }
 .enquiry__form { margin: 0; }
 .enquiry__form .tb__foot .small { margin: 0; }
-.form-status { display: none; grid-column: 1 / -1; margin: 0; padding: var(--space-md); border-right: var(--rule-hair) solid var(--color-rule); border-bottom: var(--rule-hair) solid var(--color-rule); background: var(--color-paper-3); color: var(--color-ink); font-weight: 500; }
+.form-status { display: none; grid-column: 1 / -1; margin: 0; padding: var(--space-md); border-radius: var(--radius-input); background: var(--color-accent-soft); color: var(--color-ink); font-weight: 400; }
 .form-status.show { display: block; }
 .form-status:focus-visible { outline: 2px solid var(--color-focus); outline-offset: -4px; }
-.form-note { grid-column: 1 / -1; margin: 0; padding: var(--space-md); border-right: var(--rule-hair) solid var(--color-rule); border-bottom: var(--rule-hair) solid var(--color-rule); color: var(--color-ink-2); }
+.form-note { grid-column: 1 / -1; margin: 0; color: var(--color-ink-2); }
 @media (max-width: 60rem) { .enquiry__head { position: static; } }
 
 .next { --n: 3; }

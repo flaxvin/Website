@@ -1,6 +1,6 @@
 /* Products: Pathayam beside its spec, the four published counts, the reasons, the plan register, the carry-over elevation, the close. */
 
-.pt-split { align-items: center; row-gap: var(--space-2xl); }
+.pt-split { align-items: start; row-gap: var(--space-2xl); }
 .pt-text { display: grid; gap: var(--space-lg); }
 .pt-text p { max-width: 62ch; }
 .pt-text .actions { margin-top: var(--space-xs); }
@@ -35,3 +35,7 @@
   .pt-elev__col, .pt-elev__col + .pt-elev__col { padding: 0; border-left: 0; }
   .pt-elev__col + .pt-elev__col { padding-top: var(--space-2xl); border-top: var(--rule-heavy) solid var(--color-rule); }
 }
+
+/* Pathayam's own screens, four across two rows */
+.pt-shots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2xl) var(--gap-columns); margin-top: var(--space-3xl); }
+@media (max-width: 40rem) { .pt-shots { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); margin-top: var(--space-2xl); } }
