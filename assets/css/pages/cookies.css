@@ -1,0 +1,33 @@
+/* Cookies: the cookie notice as a long document: each part a head on the left and its text on the right at a reading measure. */
+
+.doc { padding-block: var(--space-3xl); }
+.page-hero + .doc { padding-top: var(--space-2xl); }
+.doc .head { margin-bottom: var(--space-xl); }
+.doc__intro { display: grid; gap: var(--space-md); }
+.doc__intro p { max-width: 64ch; line-height: 1.7; color: var(--color-ink-2); }
+.doc__date { font-size: var(--text-sm); color: var(--color-muted); }
+
+.prose { display: grid; gap: var(--space-md); align-content: start; }
+.prose p, .prose li, .prose dd { line-height: 1.7; }
+.prose p { max-width: 64ch; color: var(--color-ink-2); }
+.prose .list { max-width: 64ch; }
+.prose .spec { max-width: 64ch; }
+.prose h3 + * { margin-top: var(--space-xs); }
+
+.doc .row__title { max-width: 16ch; }
+.doc__split { border-top: 0; }
+.doc__split > .row:first-child { padding-top: 0; }
+.doc__split .row:first-child .row__title { font-size: var(--text-section); max-width: none; }
+
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: var(--rule-heavy) solid var(--color-rule); }
+.pair > * { padding-block: var(--space-xl) 0; padding-right: var(--space-xl); }
+.pair > * + * { padding-left: var(--space-xl); padding-right: 0; border-left: var(--rule-heavy) solid var(--color-rule); }
+@media (max-width: 60rem) {
+  .pair { grid-template-columns: minmax(0, 1fr); }
+  .pair > *, .pair > * + * { padding-left: 0; padding-right: 0; border-left: 0; }
+  .pair > * + * { margin-top: var(--space-xl); border-top: var(--rule-hair) solid var(--color-rule-2); }
+}
+
+.close__text h2 { max-width: 20ch; }
+.close__side { align-content: end; }
+.close__side p { color: var(--color-ink-2); line-height: 1.7; }

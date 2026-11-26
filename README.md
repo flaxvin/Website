@@ -3,9 +3,11 @@
 The public website for Flaxvin Technologies, served at
 **https://flaxvin.tech/**
 
-Static HTML. No build step, no framework, no dependencies to install. Each page is a single
-self-contained file with its CSS and JavaScript inlined; the only external request is the
-Google Fonts stylesheet.
+Static HTML. No build step, no framework, no dependencies to install. Every page links the shared
+stylesheet `assets/css/site.css` (which imports `tokens.css` and `base.css`), its own
+`assets/css/pages/<page>.css`, and the shared script `assets/js/site.js`. The only external
+request is the Google Fonts stylesheet. The design system (Blueprint: tokens, components, rules)
+is written down in `design.md`; read it before changing the look of any page.
 
 ## Running it locally
 

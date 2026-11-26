@@ -10,3 +10,6 @@ assets/social/
 assets/templates/
 assets/logo/*
 !assets/logo/apple-touch-icon.png
+
+# Hallmark working records (screenshots, lint records)
+.hallmark/

@@ -1,0 +1,22 @@
+/* Services: the twelve lines as a register with their stacks, then each line's scope as rows, the three ways to start along one string, the close. */
+
+.svc-reg td.num { width: 5rem; }
+@media (min-width: 40.01rem) { .svc-reg tbody th { white-space: nowrap; } }
+.svc-reg tbody th a { text-decoration: none; }
+.svc-reg tbody th a:hover { text-decoration: underline; text-decoration-color: var(--color-ink); }
+.svc-reg td { color: var(--color-ink-2); }
+@media (max-width: 40rem) {
+  .svc-reg td.num { width: auto; }
+  .svc-reg tbody th { font-size: var(--text-md); }
+}
+
+.svc-rows .row { padding-block: var(--space-xl) var(--space-2xl); }
+.svc .row__no { margin: 0; font-size: var(--text-md); color: var(--color-muted); }
+.svc .row__title { margin: 0; font-size: var(--text-title); line-height: 1.2; max-width: 16ch; }
+.svc__sum { margin: 0; max-width: 56ch; font-size: var(--text-lead); line-height: 1.5; color: var(--color-ink); }
+.svc__inc { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--gap-columns); }
+@media (max-width: 40rem) { .svc__inc { grid-template-columns: minmax(0, 1fr); } }
+
+.entry { margin-top: var(--space-xl); }
+.entry h3 { margin: 0; font-size: var(--text-title); }
+.entry p { margin: 0; max-width: 40ch; color: var(--color-ink-2); }

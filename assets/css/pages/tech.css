@@ -1,0 +1,32 @@
+/* Tech stack: the seven layers as a spec sheet on the drawing grid, the three criteria under their one statement, the close. */
+
+.layers { padding: var(--space-2xl) var(--space-2xl) var(--space-xl); }
+.layers__spec { position: relative; z-index: 3; grid-template-columns: minmax(12rem, 4fr) minmax(0, 8fr); }
+.layers__spec dt, .layers__spec dd { padding-block: var(--space-lg); }
+.layers__spec dt { display: flex; align-items: baseline; gap: var(--space-md); font-family: var(--font-display); font-weight: 600; font-size: var(--text-title); line-height: 1.2; }
+.layers__spec dt .num { min-width: 2.5ch; font-size: var(--text-sm); color: var(--color-muted); }
+.layers__spec .tags li { background: var(--color-paper-3); color: var(--color-ink); font-size: var(--text-md); }
+.layers__cap { position: relative; z-index: 3; margin-top: var(--space-lg); font-size: var(--text-sm); color: var(--color-ink-2); }
+@media (max-width: 60rem) { .layers { padding: var(--space-lg); } }
+@media (max-width: 40rem) {
+  .layers { padding: var(--space-md); }
+  .layers__spec { grid-template-columns: minmax(0, 1fr); }
+  .layers__spec dt { padding-bottom: var(--space-xs); }
+  .layers__spec dd { padding-top: 0; }
+}
+
+.rules__head { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap-columns); align-items: end; }
+.rules__head h2 { grid-column: 1 / span 5; margin: 0; }
+.rules__statement { grid-column: 7 / -1; margin: 0; font-family: var(--font-display); font-weight: 600; font-size: var(--text-2xl); line-height: 1.15; max-width: 26ch; }
+.rules { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: var(--rule-heavy) solid var(--color-rule); counter-reset: rule; }
+.rules > li { display: grid; align-content: start; gap: var(--space-md); padding: var(--space-xl) var(--space-xl) var(--space-lg) 0; counter-increment: rule; }
+.rules > li + li { padding-left: var(--space-xl); border-left: var(--rule-hair) solid var(--color-rule-2); }
+.rules > li::before { content: counter(rule); font-family: var(--font-outlier); font-weight: 500; font-size: var(--text-xl); color: var(--color-muted); }
+.rules h3 { margin: 0; }
+.rules p { margin: 0; max-width: 38ch; color: var(--color-ink-2); }
+@media (max-width: 60rem) {
+  .rules__head h2, .rules__statement { grid-column: 1 / -1; }
+  .rules { grid-template-columns: minmax(0, 1fr); }
+  .rules > li, .rules > li + li { padding: var(--space-lg) 0; border-left: 0; }
+  .rules > li + li { border-top: var(--rule-hair) solid var(--color-rule-2); }
+}
