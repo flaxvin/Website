@@ -65,8 +65,8 @@
       <div class="cols pt-split">
         <div class="span-7 pt-text">
           <p>Personal budgeting software sold in India is largely imported. It assumes a card-first, statement-first market and consequently handles local conditions poorly: high daily UPI transaction volume, multiple credit cards on differing cycles, and bank statements secured with PAN-derived passwords.</p>
-          <p><strong>Pathayam</strong> is built for that. Every rupee that arrives is assigned to a job before it is spent, so the month is decided in advance rather than reconstructed afterwards. Spending on a card immediately reserves the cash to clear it. Statement PDFs from eleven Indian banks, password-protected ones included, are parsed into a review queue where a person approves every row before it posts.</p>
-          <p class="muted">The name is Malayalam (<span lang="ml">&#3370;&#3364;&#3405;&#3364;&#3390;&#3375;&#3330;</span>), the wooden chest that held a Kerala household&rsquo;s harvest, filled once and drawn from deliberately.</p>
+          <p><strong>Pathayam</strong> is built for that. Every rupee that arrives is assigned to a job before it is spent, so the month is decided in advance rather than reconstructed afterwards. Spending on a card immediately reserves the cash to clear it. Statement PDFs from twelve Indian banks, password-protected ones included, are parsed into a review queue, checked against the closing balance, and a person approves every row before it posts.</p>
+          <p class="muted">The name is Malayalam (<span lang="ml">&#3370;&#3364;&#3405;&#3364;&#3390;&#3375;&#3330;</span>), the wooden chest that held a Kerala household&rsquo;s harvest, filled once and drawn from with care.</p>
           <div class="actions">
             <a class="btn btn--primary" href="https://pathayam.app" target="_blank" rel="noopener">Visit pathayam.app</a>
             <a class="btn" href="https://github.com/flaxvin/Pathayam" target="_blank" rel="noopener">Source on GitHub</a>
@@ -77,13 +77,14 @@
           <ul class="list">
             <li>Envelope budgeting with rollover of every leftover and every overspend</li>
             <li>Credit cards ranked by what falls due next, with the cash already set aside</li>
-            <li>Statement, CSV and bank-alert import across eleven Indian banks</li>
-            <li>Loans, holdings and net worth: FIFO lots, real cost basis, XIRR</li>
-            <li>Runs in one container on your own machine; no telemetry</li>
-            <li>The database is a single SQLite file you can open with anything</li>
+            <li>Statement PDFs from twelve Indian banks, plus CSVs, bank alerts, CAS, and YNAB or Actual Budget exports</li>
+            <li>Holdings and net worth: FIFO lots, exact cost basis, XIRR; mutual funds, shares, FDs, PPF, EPF and gold</li>
+            <li>Your AIS read into the tax estimate, old and new regimes side by side</li>
+            <li>Ask Claude, ChatGPT or Gemini about your budget through a built-in MCP server, read-only unless you allow changes</li>
+            <li>One container and one SQLite file; no telemetry, ever</li>
           </ul>
           <ul class="tags" aria-label="Built with">
-            <li>TypeScript</li><li>Node 24+</li><li>node:sqlite</li><li>node:http</li><li>Zero runtime dependencies</li>
+            <li>TypeScript</li><li>Node 24+</li><li>node:sqlite</li><li>node:http</li><li>Zero runtime dependencies</li><li>PolyForm Noncommercial 1.0.0</li>
           </ul>
         </aside>
       </div>
@@ -94,16 +95,16 @@
     <div class="container">
       <div class="head head--split">
         <h2 id="figures-title">Pathayam in four counts</h2>
-        <p class="lead">As published on pathayam.app.</p>
+        <p class="lead">As published on pathayam.app and in the source repository.</p>
       </div>
       <figure class="pt-figures">
         <dl class="pt-figures__set">
           <div><dt>Tests, run on every change</dt><dd class="num">1,119</dd></div>
           <div><dt>Runtime dependencies</dt><dd class="num">0</dd></div>
-          <div><dt>Indian banks parsed from statement PDFs</dt><dd class="num">11</dd></div>
+          <div><dt>Indian banks parsed from statement PDFs</dt><dd class="num">12</dd></div>
           <div><dt>Months of real-shaped data replayed through the engine</dt><dd class="num">36</dd></div>
         </dl>
-        <figcaption>These figures are published on pathayam.app and change as the product develops. Verify before reproduction.</figcaption>
+        <figcaption>The test count is from the repository README; the other three are published on pathayam.app. They change as the product develops. Verify before reproduction.</figcaption>
       </figure>
     </div>
   </section>
@@ -134,22 +135,22 @@
     <div class="container">
       <div class="head head--split">
         <h2 id="pricing-title">Licensing and pricing</h2>
-        <p class="lead">Hosting has not opened yet: these are launch prices, and the waitlist is told before anyone is charged.</p>
+        <p class="lead">Run it yourself free, or have us host it. Hosted instances are set up on request; nothing is charged until a plan is agreed.</p>
       </div>
       <div class="register-wrap" role="region" aria-labelledby="pricing-title" tabindex="0">
         <table class="register register--stack pt-plans">
-          <caption>Pathayam plans as published on pathayam.app at the time of writing. Prices exclude 18% GST unless stated.</caption>
+          <caption>Pathayam plans as published on pathayam.app at the time of writing. Prices exclude 18% GST; the inclusive price is shown beneath. Annual billing gives four or more months free. Hosted instances run on Fly.io in Singapore.</caption>
           <thead><tr><th scope="col">Plan</th><th scope="col">Price</th><th scope="col">Who it is for</th><th scope="col">Status</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Self-host</th><td data-label="Price">Free, forever</td><td data-label="Who it is for">One container on your own machine. Every feature, no limits. Licensed for noncommercial use.</td><td data-label="Status">Available now</td></tr>
-            <tr><th scope="row">Solo</th><td data-label="Price"><span class="num">&#8377;249</span> / month</td><td data-label="Who it is for">One member, the whole budgeting engine.</td><td data-label="Status">Waitlist</td></tr>
-            <tr><th scope="row">Household</th><td data-label="Price"><span class="num">&#8377;499</span> / month</td><td data-label="Who it is for">Up to five members. The tier most people want.</td><td data-label="Status">Waitlist</td></tr>
-            <tr><th scope="row">Power</th><td data-label="Price"><span class="num">&#8377;1,099</span> / month</td><td data-label="Who it is for">Custom domain, one-year backup retention, same-day support.</td><td data-label="Status">Waitlist</td></tr>
-            <tr><th scope="row">Forwarding address</th><td data-label="Price"><span class="num">&#8377;100</span> / month</td><td data-label="Who it is for">Add-on on any hosted tier: bank alerts land in the review queue without inbox access.</td><td data-label="Status">Waitlist</td></tr>
+            <tr><th scope="row">Self-host</th><td data-label="Price">Free, forever</td><td data-label="Who it is for">One container on your own machine. Every feature, no limits, unlimited household members. You handle backups and updates. Licensed for noncommercial use.</td><td data-label="Status">Available now</td></tr>
+            <tr><th scope="row">Solo</th><td data-label="Price"><span class="num">&#8377;249</span> / month<br><span class="small muted">&#8377;294 with GST</span></td><td data-label="Who it is for">One member, the whole budgeting engine. 30-day backup retention.</td><td data-label="Status">On request</td></tr>
+            <tr><th scope="row">Household</th><td data-label="Price"><span class="num">&#8377;499</span> / month<br><span class="small muted">&#8377;589 with GST</span></td><td data-label="Who it is for">Up to five members. 90-day backup retention and a monthly verified-restore report. The tier most households want.</td><td data-label="Status">On request</td></tr>
+            <tr><th scope="row">Power</th><td data-label="Price"><span class="num">&#8377;1,099</span> / month<br><span class="small muted">&#8377;1,297 with GST</span></td><td data-label="Who it is for">Unlimited members, custom domain, one-year backup retention, same-day support, priority on new bank parsers.</td><td data-label="Status">On request</td></tr>
+            <tr><th scope="row">Forwarding address</th><td data-label="Price"><span class="num">&#8377;100</span> / month<br><span class="small muted">&#8377;118 with GST</span></td><td data-label="Who it is for">Add-on on any hosted tier: bank alerts land in the review queue without inbox access. Nothing forwarded is kept beyond 90 days.</td><td data-label="Status">On request</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="small muted pt-note">Commercial use of the free tier (running a business&rsquo;s or a freelance practice&rsquo;s books on it) needs a hosted plan or a commercial licence. <!-- PLACEHOLDER: pathayam.app directs commercial-licence enquiries to hello@flaxvin.tech, while this site uses hello@flaxvin.tech throughout. Settle on one domain and one address. --></p>
+      <p class="small muted pt-note">Commercial use of the free tier (running a business&rsquo;s or a freelance practice&rsquo;s books on it) needs a hosted plan or a commercial licence: write to <a href="mailto:hello@flaxvin.tech">hello@flaxvin.tech</a>. The free version is licensed under PolyForm Noncommercial 1.0.0: source available, not open source.</p>
     </div>
   </section>
 
@@ -190,7 +191,7 @@
       </div>
       <div class="close__side">
         <a class="btn btn--primary" href="contact.html">Start a project</a>
-        <a class="btn" href="https://pathayam.app" target="_blank" rel="noopener">Try the Pathayam demo</a>
+        <a class="btn" href="https://pathayam.app/demo.html" target="_blank" rel="noopener">Try the Pathayam demo</a>
       </div>
     </div>
   </section>
