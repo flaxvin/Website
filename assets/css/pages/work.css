@@ -1,5 +1,4 @@
 /* Work: the index of six projects, each case opened as a row with its challenge, solution and stack, the evidence policy, the close. */
-/* Hallmark · waive 49b · the six case titles in the work index wrap to two lines at 320px at most · each title is the project's own name and cannot shorten */
 
 .wk-index td.num { width: 4rem; color: var(--color-muted); }
 .wk-index tbody th { font-size: var(--text-md); max-width: 30ch; }

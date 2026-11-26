@@ -5,7 +5,7 @@
 .layers__spec dt, .layers__spec dd { padding-block: var(--space-lg); }
 .layers__spec dt { display: flex; align-items: baseline; gap: var(--space-md); font-family: var(--font-display); font-weight: 600; font-size: var(--text-title); line-height: 1.2; }
 .layers__spec dt .num { min-width: 2.5ch; font-size: var(--text-sm); color: var(--color-muted); }
-.layers__spec .tags li { background: var(--color-paper-3); color: var(--color-ink); font-size: var(--text-md); }
+.layers__spec .tags li { background: var(--color-paper-2); color: var(--color-ink); font-size: var(--text-md); }
 .layers__cap { position: relative; z-index: 3; margin-top: var(--space-lg); font-size: var(--text-sm); color: var(--color-ink-2); }
 @media (max-width: 60rem) { .layers { padding: var(--space-lg); } }
 @media (max-width: 40rem) {
@@ -21,7 +21,7 @@
 .rules { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: var(--rule-heavy) solid var(--color-rule); counter-reset: rule; }
 .rules > li { display: grid; align-content: start; gap: var(--space-md); padding: var(--space-xl) var(--space-xl) var(--space-lg) 0; counter-increment: rule; }
 .rules > li + li { padding-left: var(--space-xl); border-left: var(--rule-hair) solid var(--color-rule-2); }
-.rules > li::before { content: counter(rule); font-family: var(--font-outlier); font-weight: 500; font-size: var(--text-xl); color: var(--color-muted); }
+.rules > li::before { content: counter(rule); font-family: var(--font-outlier); font-weight: 400; font-size: var(--text-xl); color: var(--color-muted); }
 .rules h3 { margin: 0; }
 .rules p { margin: 0; max-width: 38ch; color: var(--color-ink-2); }
 @media (max-width: 60rem) {

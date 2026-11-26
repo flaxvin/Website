@@ -1,21 +1,93 @@
+/* Hallmark · tokens · theme: brand, Flaxvin as Pathayam's maker (sibling palette: warm linen paper, laterite accent, ink slab) */
+/*
+ * Every colour and face on the site comes from here. Light is :root; dark follows
+ * the reader's system setting only. There is no toggle, because a remembered
+ * choice would need browser storage and the cookie notice promises none.
+ *
+ * Family resemblance to Pathayam: the same warm paper, the same display face
+ * (Bricolage Grotesque), money and figures in IBM Plex Mono, screenshots in a
+ * dark frame. What makes it Flaxvin's: the accent is laterite, the red earth of
+ * Kerala, not Pathayam's blue; the dark ground is warm charcoal, not blue-black;
+ * the body face is IBM Plex Sans; buttons are pills; the ink slab sits at the
+ * foot of the page, not the head.
+ */
 :root {
-  color-scheme: light;
+  color-scheme: light dark;
   --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px; --space-4xl: 144px;
-  --text-xs: 0.8125rem; --text-sm: 0.875rem; --text-md: 1rem; --text-lg: 1.25rem; --text-xl: 1.5625rem; --text-2xl: 1.953rem; --text-3xl: 2.441rem;
-  --text-display-s: clamp(2.25rem, 4vw + 0.5rem, 3.75rem); --text-display: clamp(2.75rem, 5vw + 1rem, 5.25rem);
-  --text-section: clamp(2rem, 2.5vw + 1rem, 3.5rem); --text-title: clamp(1.25rem, 0.75vw + 0.875rem, 1.625rem); --text-lead: clamp(1.125rem, 0.35vw + 1rem, 1.375rem);
+  --text-xs: 0.8125rem; --text-sm: 0.875rem; --text-md: 1.0625rem; --text-lg: 1.25rem; --text-xl: 1.5625rem; --text-2xl: 1.953rem; --text-3xl: 2.441rem;
+  --text-display-s: clamp(2.25rem, 3.6vw + 0.75rem, 4rem); --text-display: clamp(2.75rem, 5vw + 1rem, 5.5rem);
+  --text-section: clamp(2rem, 2.4vw + 1rem, 3.375rem); --text-title: clamp(1.25rem, 0.75vw + 0.875rem, 1.625rem); --text-lead: clamp(1.125rem, 0.35vw + 1rem, 1.375rem);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1); --ease-in: cubic-bezier(0.7, 0, 0.84, 0); --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
   --dur-micro: 120ms; --dur-short: 220ms; --dur-long: 420ms;
-  --color-error: oklch(52% 0.19 27); --color-success: oklch(50% 0.12 150);
-  --container: 1440px; --gutter: 64px; --gap-columns: 32px; --section-gap-s: 120px; --section-gap: 144px; --section-gap-l: 176px;
+  --container: 1440px; --gutter: 64px; --gap-columns: 32px; --section-gap-s: 112px; --section-gap: 136px; --section-gap-l: 168px;
   --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
-  --color-paper: oklch(35% 0.105 256); --color-paper-2: oklch(31% 0.10 257); --color-paper-3: oklch(26.5% 0.095 258);
-  --color-ink: oklch(97% 0.012 240); --color-ink-2: oklch(90% 0.025 242); --color-muted: oklch(80% 0.045 244);
-  --color-rule: oklch(93% 0.02 240 / 0.85); --color-rule-2: oklch(93% 0.02 240 / 0.32);
-  --color-grid: oklch(97% 0.01 240 / 0.09); --color-grid-2: oklch(97% 0.01 240 / 0.2);
-  --color-accent: oklch(97% 0.012 240); --color-accent-ink: oklch(33% 0.105 256); --color-focus: oklch(97% 0.012 240);
-  --font-display: "Chakra Petch", ui-sans-serif, sans-serif; --font-body: "IBM Plex Sans", ui-sans-serif, sans-serif;
-  --font-outlier: "IBM Plex Mono", ui-monospace, monospace;
-  --radius-card: 0; --radius-pill: 0; --rule-hair: 1px; --rule-heavy: 2px; --shadow-card: none;
-  --tracking-display: -0.012em; --display-weight: 600; --sheet-inset: 20px; --tick: 14px;
+  --hdr-h: 72px;
+
+  /* Paper: warm linen, a shade sandier than Pathayam's. */
+  --color-paper:   oklch(96.4% 0.011 78);
+  --color-paper-2: oklch(93.2% 0.018 75);
+  --color-paper-3: oklch(99% 0.005 80);
+  --color-ink:     oklch(22% 0.014 55);
+  --color-ink-2:   oklch(42% 0.024 58);
+  --color-muted:   oklch(49% 0.024 62);
+  --color-rule:    oklch(87% 0.018 72);
+  --color-rule-2:  oklch(77% 0.026 68);
+
+  /* Laterite: the accent. Buttons, links, the mark, focus. */
+  --color-accent:      oklch(51.5% 0.148 38);
+  --color-accent-2:    oklch(45.5% 0.135 36);
+  --color-accent-ink:  oklch(99% 0.005 60);
+  --color-accent-soft: oklch(93.6% 0.03 48);
+  --color-focus:       oklch(50% 0.17 38);
+  --color-error:   oklch(52% 0.19 27);
+  --color-success: oklch(48% 0.11 150);
+
+  /* The deep band (the close on each page): laterite, paper text. */
+  --color-deep:      oklch(46% 0.135 37);
+  --color-deep-ink:  oklch(98.5% 0.008 70);
+  --color-deep-2:    oklch(91% 0.03 60);
+  --color-deep-rule: oklch(98.5% 0.008 70 / 0.35);
+
+  /* The slab (footer): ink in both themes. */
+  --color-slab:      oklch(22% 0.014 55);
+  --color-slab-ink:  oklch(96% 0.01 78);
+  --color-slab-2:    oklch(79% 0.018 72);
+  --color-slab-rule: oklch(96% 0.01 78 / 0.16);
+  --color-slab-mark: oklch(72% 0.14 45);
+
+  /* Pathayam's screenshots are its dark theme; their frame matches them. */
+  --color-shot: oklch(19.1% 0.013 264);
+
+  --font-display: "Bricolage Grotesque", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-outlier: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --radius-card: 16px; --radius-input: 10px; --radius-pill: 999px; --rule-hair: 1px; --rule-heavy: 1px; --shadow-card: none;
+  --tracking-display: -0.028em; --display-weight: 700;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-paper:   oklch(18.6% 0.01 60);
+    --color-paper-2: oklch(22.6% 0.013 60);
+    --color-paper-3: oklch(26% 0.015 62);
+    --color-ink:     oklch(95.4% 0.009 78);
+    --color-ink-2:   oklch(80.5% 0.018 72);
+    --color-muted:   oklch(71% 0.02 70);
+    --color-rule:    oklch(31.5% 0.016 62);
+    --color-rule-2:  oklch(43% 0.022 62);
+    --color-accent:      oklch(72.5% 0.135 46);
+    --color-accent-2:    oklch(80% 0.1 52);
+    --color-accent-ink:  oklch(19% 0.012 55);
+    --color-accent-soft: oklch(28.5% 0.045 45);
+    --color-focus:       oklch(76% 0.14 48);
+    --color-deep:      oklch(30% 0.075 40);
+    --color-deep-ink:  oklch(96% 0.01 70);
+    --color-deep-2:    oklch(84% 0.03 60);
+    --color-deep-rule: oklch(96% 0.01 70 / 0.22);
+    --color-slab:      oklch(13.5% 0.008 60);
+    --color-slab-ink:  oklch(95.4% 0.009 78);
+    --color-slab-2:    oklch(76% 0.018 72);
+    --color-shot: oklch(14.5% 0.012 264);
+  }
 }
