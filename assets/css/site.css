@@ -1,7 +1,7 @@
-/* Hallmark · shape: Split Studio (/), Banner register (inner pages) · genre: editorial · theme: brand (Flaxvin, sibling of Pathayam: linen paper, laterite accent, ink slab) · redesign: full · job: hire
- * paper: oklch(96.4% 0.011 78) · accent: oklch(51.5% 0.148 38) · display: Bricolage Grotesque · body: IBM Plex Sans · hero: Banner (every inner page), Split Studio (/) · nav: paper bar, laterite mark, pill action · footer: ink slab, the wordmark over the link columns · imagery: Pathayam's own screens in a dark frame · signature: the maker's site shows the product it makes, figures in tabular mono
+/* Hallmark · shape: Index hero (/), Banner register (inner pages) · genre: editorial · theme: brand (Flaxvin, sibling of Pathayam: linen paper, laterite accent, ink slab) · redesign: full · job: hire
+ * paper: oklch(96.4% 0.011 78) · accent: oklch(51.5% 0.148 38) · display: Bricolage Grotesque · body: IBM Plex Sans · hero: Banner (every inner page), Index (/) · nav: paper bar, laterite mark, pill action · footer: ink slab, the wordmark over the link columns · imagery: none, the site carries type, cards and figures · signature: the seven pages as counted cards beside the claim, figures in tabular mono
  * axes: light/grotesk-heavy/warm · posture: restrained, one drenched band (the close) · contrast: pass · fold: pass · v2.0.0 */
-/* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V5 · weakest: P, a supplier site argues little; the product screens and the published record carry it */
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V5 · weakest: P, a supplier site argues little; the published record and the counted index carry it */
 /* Hallmark · waive 77 · the enquiry close is one line and an action pair, once a page · the hire job ends on the enquiry, contact details sit in the footer */
 /* Hallmark · dismissed 42 · the footer is a slab: the Flaxvin wordmark at display size over the columns, named in the stamp */
 /* Hallmark · waive 49b · service and case titles in the services and work registers wrap to two lines at 320px only · each is the service's or project's real name and cannot shorten */
@@ -166,7 +166,7 @@ a:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; bo
 .sheet { background: var(--color-paper-3); }
 @media (max-width: 40rem) { .fig { padding: var(--space-lg); } }
 
-/* ---------- Pathayam's screens, in the app's own dark frame ---------- */
+/* ---------- product screenshots in a dark frame (none in use) ---------- */
 .frame { overflow: hidden; margin: 0; border-radius: var(--radius-card); background: var(--color-shot); outline: 1px solid color-mix(in oklab, var(--color-ink) 12%, transparent); outline-offset: -1px; }
 .frame picture { display: block; }
 .frame img { width: 100%; aspect-ratio: 14 / 10; object-fit: cover; object-position: top left; }

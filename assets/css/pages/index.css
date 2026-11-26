@@ -1,4 +1,4 @@
-/* Home: Split Studio. The claim beside Pathayam's own screen, the delivery record, the seven pages as an index, the questions, the working day, the close. */
+/* Home: the claim beside the seven pages as an index of cards with their counts, the delivery record, the questions, the working day, the close. */
 
 /* ---------- hero ---------- */
 .hero { display: grid; align-items: center; min-height: calc(100dvh - var(--hdr-h)); padding-block: var(--space-2xl); }
@@ -30,16 +30,18 @@
   .figs > div:first-child { padding-top: 0; border-top: 0; }
 }
 
-/* ---------- the seven pages, as cards with their counts ---------- */
+/* ---------- the seven pages, as cards with their counts (in the hero) ---------- */
+.hero__index { display: grid; gap: var(--space-md); }
+.hero__index-title { max-width: none; font-family: var(--font-body); font-weight: 400; font-size: var(--text-sm); letter-spacing: 0; line-height: 1.4; color: var(--color-muted); }
+.hero__index .index { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.hero__index .index li:last-child { grid-column: 1 / -1; }
 .index { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-md); }
 .index a { display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-rows: auto auto; column-gap: var(--space-md); align-items: baseline; height: 100%; padding: var(--space-lg); border: var(--rule-hair) solid var(--color-rule); border-radius: var(--radius-card); background: var(--color-paper-3); color: var(--color-ink); text-decoration: none; transition: border-color var(--dur-short) var(--ease-out), transform var(--dur-short) var(--ease-out); }
 .index a:hover { border-color: var(--color-accent); color: var(--color-ink); transform: translateY(-2px); }
 .index__n { grid-row: 1 / span 2; font-size: var(--text-3xl); line-height: 1; color: var(--color-accent); }
 .index__t { font-family: var(--font-display); font-weight: 700; font-size: var(--text-lg); letter-spacing: -0.015em; line-height: 1.2; }
 .index__d { font-size: var(--text-sm); color: var(--color-ink-2); }
-@media (max-width: 75rem) { .index { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-@media (max-width: 60rem) { .index { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 40rem) { .index { grid-template-columns: minmax(0, 1fr); gap: var(--space-xs); } .index a { padding: var(--space-md); } .index__n { font-size: var(--text-2xl); } }
+@media (max-width: 40rem) { .hero__index .index, .index { grid-template-columns: minmax(0, 1fr); gap: var(--space-xs); } .index a { padding: var(--space-md); } .index__n { font-size: var(--text-2xl); } }
 @media (prefers-reduced-motion: reduce) { .index a { transition: none; } .index a:hover { transform: none; } }
 
 /* ---------- questions ---------- */
