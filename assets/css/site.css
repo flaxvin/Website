@@ -2,12 +2,10 @@
  * hero: Banner (every inner page), Index (/) · nav: edge-aligned, the wordmark left, the eight sheets and one outlined action right · footer: mast, the wordmark large over the sheet links and the contact block · imagery: none, the site carries type, registers and dimension strings · signature: the site set out as a drawing register, sheet numbers in mono, real counts from each page · blueprint: cyanotype
  * axes: mid/geometric-sans/neutral · posture: drenched · contrast: pass · fold: pass · v2.0.0 */
 /* Hallmark · pre-emit critique: P4 H4 E4 S4 R5 V4 · weakest: P, a supplier site argues little; leaned on the register and the policy lines (we publish what clients approve) as the argument */
-/* Hallmark · dropped the delivery-record figure band (40+, 6, 95%, 4–6 hrs) · the source comment says three of four were invented, 46a forbids them */
 /* Hallmark · waive 77 · the enquiry close is one line and an action pair, once a page · the hire job ends on the enquiry, contact details sit in the footer */
 /* Hallmark · dismissed 42 · the footer is a mast: the Flaxvin wordmark at display size over the columns, named in the stamp */
-/* Hallmark · waive 49b · the services register link Dedicated teams and staff augmentation is the service's real name, two lines at 320px at most */
-/* Hallmark · dropped 68%, 99.95%, 41%, 62%, 35%, 97%, 22% and the other case-study outcome figures · work.html marks them illustrative, 46a forbids them */
-/* Hallmark · dropped hg1, hg2, hg3, bm-hdr, bm-ftr, proof · gradient defs of the retired logo and hero art, and the invented figure band */
+/* Hallmark · waive 49b · Dedicated teams and staff augmentation wraps to two lines at 320px only · the services register link is the service's real name and cannot shorten */
+/* Hallmark · dropped hg1, hg2, hg3, bm-hdr, bm-ftr · gradient defs of the retired logo and hero art */
 /* Hallmark · hero-review: fix · 5 findings · 5 resolved · finish-review: in-thread (reviewer hit a usage limit) · responsive: 12 pages x 8 widths 320 to 1920, no sideways scroll, no clipped text, tap targets 44px+ */
 /* Hallmark · dropped the .reveal scroll fade and its observer · the Blueprint sheet is static, content shows without script */
 @import url("./tokens.css");
