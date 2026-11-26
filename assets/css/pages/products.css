@@ -1,0 +1,37 @@
+/* Products: Pathayam beside its spec, the four published counts, the reasons, the plan register, the carry-over elevation, the close. */
+
+.pt-split { align-items: center; row-gap: var(--space-2xl); }
+.pt-text { display: grid; gap: var(--space-lg); }
+.pt-text p { max-width: 62ch; }
+.pt-text .actions { margin-top: var(--space-xs); }
+.pt-glance { display: grid; gap: var(--space-lg); background: var(--color-paper-2); }
+.pt-glance .list li { color: var(--color-ink-2); }
+
+.pt-figures { margin: 0; display: grid; gap: var(--space-lg); }
+.pt-figures__set { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0; border-top: var(--rule-heavy) solid var(--color-rule); border-bottom: var(--rule-hair) solid var(--color-rule); }
+.pt-figures__set > div { display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: var(--space-sm); padding: var(--space-xl) var(--space-lg); border-left: var(--rule-hair) solid var(--color-rule-2); }
+.pt-figures__set > div:first-child { border-left: 0; padding-left: 0; }
+.pt-figures__set dd { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: var(--text-display-s); line-height: 1; color: var(--color-ink); font-variant-numeric: tabular-nums; }
+.pt-figures__set dt { max-width: 22ch; font-size: var(--text-sm); color: var(--color-ink-2); }
+.pt-figures figcaption { max-width: 65ch; font-size: var(--text-sm); color: var(--color-muted); }
+@media (max-width: 60rem) {
+  .pt-figures__set { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pt-figures__set > div:nth-child(odd) { border-left: 0; padding-left: 0; }
+  .pt-figures__set > div:nth-child(n+3) { border-top: var(--rule-hair) solid var(--color-rule-2); }
+}
+
+.pt-plans tbody th { white-space: nowrap; }
+.pt-plans td:nth-child(2) { white-space: nowrap; color: var(--color-ink); }
+.pt-plans td:last-child { white-space: nowrap; }
+.pt-plans .num { color: var(--color-ink); }
+.pt-note { max-width: 65ch; margin-top: var(--space-lg); }
+@media (max-width: 40rem) { .pt-plans tbody th, .pt-plans td:nth-child(2), .pt-plans td:last-child { white-space: normal; } }
+
+.pt-elev { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.pt-elev__col { display: grid; align-content: start; gap: var(--space-lg); padding-right: var(--space-2xl); }
+.pt-elev__col + .pt-elev__col { padding-right: 0; padding-left: var(--space-2xl); border-left: var(--rule-heavy) solid var(--color-rule); }
+@media (max-width: 60rem) {
+  .pt-elev { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-2xl); }
+  .pt-elev__col, .pt-elev__col + .pt-elev__col { padding: 0; border-left: 0; }
+  .pt-elev__col + .pt-elev__col { padding-top: var(--space-2xl); border-top: var(--rule-heavy) solid var(--color-rule); }
+}

@@ -1,0 +1,42 @@
+/* Work: the index of six projects, each case opened as a row with its challenge, solution and stack, the evidence policy, the close. */
+/* Hallmark · waive 49b · the six case titles in the work index wrap to two lines at 320px at most · each title is the project's own name and cannot shorten */
+
+.wk-index td.num { width: 4rem; color: var(--color-muted); }
+.wk-index tbody th { font-size: var(--text-md); max-width: 30ch; }
+.wk-index tbody th a { text-decoration: none; }
+.wk-index tbody th a:hover { text-decoration: underline; text-decoration-color: var(--color-ink); }
+.wk-index td .num { color: var(--color-ink-2); }
+.wk-index td:nth-child(5) { white-space: nowrap; }
+@media (max-width: 40rem) { .wk-index td.num { width: auto; } }
+
+.wk-cases .row { padding-block: var(--space-2xl); scroll-margin-top: var(--space-3xl); }
+.wk-cases .row__no { margin: 0; font-size: var(--text-lg); color: var(--color-muted); }
+.wk-cases .row__title { display: grid; align-content: start; gap: var(--space-sm); grid-column: 2 / span 4; }
+.wk-cases .row__title h3 { font-size: var(--text-2xl); line-height: 1.15; overflow-wrap: break-word; min-width: 0; }
+.wk-cases .row__body { grid-column: 6 / -1; gap: 0; }
+.wk-cases .spec dd { max-width: 65ch; }
+.wk-cases .spec dd .tags li { color: var(--color-ink); }
+@media (max-width: 60rem) { .wk-cases .row__title, .wk-cases .row__body { grid-column: 1 / -1; } }
+
+.wk-policy { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: var(--gap-columns); border-top: var(--rule-heavy) solid var(--color-rule); }
+.wk-policy dt, .wk-policy dd { padding-block: var(--space-xl); }
+.wk-policy dt { font-family: var(--font-display); font-weight: 600; font-size: var(--text-title); line-height: 1.2; }
+.wk-policy dd { font-size: var(--text-lead); line-height: 1.5; max-width: 52ch; }
+@media (max-width: 40rem) { .wk-policy { grid-template-columns: minmax(0, 1fr); } .wk-policy dt { padding-bottom: 0; } .wk-policy dd { padding-top: var(--space-sm); } }
+
+/* the index restacks below 72rem so the six case titles keep their line */
+@media (max-width: 72rem) {
+  .wk-index thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .wk-index, .wk-index tbody { display: block; }
+  .wk-index tr { display: grid; grid-template-columns: 3rem minmax(0, 1fr); column-gap: var(--space-sm); row-gap: var(--space-2xs); padding-block: var(--space-md); border-bottom: var(--rule-hair) solid var(--color-rule-2); }
+  .wk-index td, .wk-index tbody th { display: block; grid-column: 2; padding: 0; border: 0; max-width: none; }
+  .wk-index td.num { grid-column: 1; grid-row: 1 / span 4; width: auto; }
+  .wk-index tbody tr:last-child > * { border: 0; }
+  .wk-index td[data-label] { font-size: var(--text-sm); }
+  .wk-index td[data-label]::before { content: attr(data-label) ": "; color: var(--color-muted); }
+  .wk-index caption { display: block; }
+}
+@media (max-width: 40rem) {
+  .wk-index tr { grid-template-columns: minmax(0, 1fr); }
+  .wk-index td, .wk-index tbody th, .wk-index td.num { grid-column: 1; grid-row: auto; }
+}

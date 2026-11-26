@@ -1,0 +1,30 @@
+/* Industries: the seven sectors as a set of keylined sheets with fintech leading, what domain experience changes as rows beside their head, the close. */
+
+.sectors { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: var(--rule-heavy) solid var(--color-rule); }
+.sector { display: grid; grid-template-columns: minmax(0, 1fr); align-content: start; gap: var(--space-md); padding: var(--space-xl) var(--space-xl) var(--space-2xl) 0; border-bottom: var(--rule-hair) solid var(--color-rule-2); }
+.sector:nth-child(odd):not(.sector--lead) { padding-left: var(--space-xl); border-left: var(--rule-hair) solid var(--color-rule-2); }
+.sector h3, .sector p { margin: 0; }
+.sector p { max-width: 52ch; color: var(--color-ink-2); }
+.sector .list { margin-top: var(--space-xs); }
+.sector--lead { grid-column: 1 / -1; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap-columns); padding-right: 0; }
+.sector--lead h3 { grid-column: 1 / span 5; font-size: var(--text-2xl); line-height: 1.15; }
+.sector--lead p { grid-column: 1 / span 5; font-size: var(--text-lead); line-height: 1.5; color: var(--color-ink); }
+.sector--lead .list { grid-column: 7 / -1; grid-row: 1 / span 2; margin-top: 0; }
+@media (max-width: 60rem) {
+  .sectors { grid-template-columns: minmax(0, 1fr); }
+  .sector, .sector:nth-child(odd):not(.sector--lead) { padding: var(--space-xl) 0; border-left: 0; }
+  .sector--lead h3, .sector--lead p, .sector--lead .list { grid-column: 1 / -1; grid-row: auto; }
+}
+
+.domain { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap-columns); row-gap: var(--space-xl); align-items: start; }
+.domain__head { grid-column: 1 / span 4; position: sticky; top: var(--space-3xl); }
+.domain__head h2 { margin: 0; }
+.domain__rows { grid-column: 5 / -1; }
+.domain__rows .row { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+.domain__rows .row__title { grid-column: 1 / span 3; margin: 0; }
+.domain__rows .row__body { grid-column: 4 / -1; }
+.domain__rows .row__body p { margin: 0; max-width: 52ch; color: var(--color-ink-2); }
+@media (max-width: 60rem) {
+  .domain__head, .domain__rows { grid-column: 1 / -1; position: static; }
+  .domain__rows .row__title, .domain__rows .row__body { grid-column: 1 / -1; }
+}
