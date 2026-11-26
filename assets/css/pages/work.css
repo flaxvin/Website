@@ -40,3 +40,15 @@
   .wk-index tr { grid-template-columns: minmax(0, 1fr); }
   .wk-index td, .wk-index tbody th, .wk-index td.num { grid-column: 1; grid-row: auto; }
 }
+
+/* outcomes: three measured figures per case, parted by hairlines */
+.outcomes { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-md); }
+.outcomes li { display: grid; align-content: start; gap: var(--space-2xs); padding-left: var(--space-md); border-left: var(--rule-hair) solid var(--color-rule-2); }
+.outcomes li:first-child { padding-left: 0; border-left: 0; }
+.outcomes__n { font-family: var(--font-display); font-weight: 600; font-size: var(--text-2xl); line-height: 1.1; color: var(--color-ink); font-variant-numeric: tabular-nums; }
+.outcomes__l { font-size: var(--text-sm); color: var(--color-ink-2); }
+@media (max-width: 40rem) {
+  .outcomes { grid-template-columns: minmax(0, 1fr); }
+  .outcomes li { padding-left: 0; border-left: 0; padding-top: var(--space-sm); border-top: var(--rule-hair) solid var(--color-rule-2); }
+  .outcomes li:first-child { padding-top: 0; border-top: 0; }
+}

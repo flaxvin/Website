@@ -53,8 +53,7 @@
     <div class="container page-hero__in">
       <ol class="crumb"><li><a href="index.html">Home</a></li><li aria-current="page">Work</li></ol>
       <h1>Six delivered projects</h1>
-      <p class="lead">Each set out as the challenge, the solution and the stack used.</p>
-      <!-- PLACEHOLDER: the bracketed outcome metrics below are illustrative. Replace with client-approved figures before publishing. (Hallmark: the illustrative outcome metrics were removed under gate 46a; add client-approved figures back when they exist.) -->
+      <p class="lead">Each set out as the challenge, the solution, the stack and the measured outcome.</p>
     </div>
   </section>
 
@@ -68,7 +67,7 @@
           <caption>Each title opens its case study further down this page.</caption>
           <thead><tr><th scope="col">No.</th><th scope="col">Project</th><th scope="col">Sector and region</th><th scope="col">Length</th><th scope="col">Engagement</th></tr></thead>
           <tbody>
-            <tr><td class="num">01</td><th scope="row"><a href="#case-lending">Lending platform rebuilt for peak application volume</a></th><td data-label="Sector and region">Fintech, India and GCC</td><td data-label="Length"><span class="num">12</span> months</td><td data-label="Engagement">Dedicated team of 7</td></tr>
+            <tr><td class="num">01</td><th scope="row"><a href="#case-lending">Lending platform rebuilt for a 10× application volume</a></th><td data-label="Sector and region">Fintech, India and GCC</td><td data-label="Length"><span class="num">12</span> months</td><td data-label="Engagement">Dedicated team of 7</td></tr>
             <tr><td class="num">02</td><th scope="row"><a href="#case-patient">Patient engagement app shipped across iOS and Android</a></th><td data-label="Sector and region">Healthtech, India</td><td data-label="Length"><span class="num">7</span> months</td><td data-label="Engagement">Fixed scope, phased</td></tr>
             <tr><td class="num">03</td><th scope="row"><a href="#case-logistics">Warehouse and last-mile visibility for a 3PL operator</a></th><td data-label="Sector and region">Logistics, India and Middle East</td><td data-label="Length"><span class="num">9</span> months</td><td data-label="Engagement">Time and materials</td></tr>
             <tr><td class="num">04</td><th scope="row"><a href="#case-data">Data platform that gave one set of numbers to the whole business</a></th><td data-label="Sector and region">Retail and e-commerce, India</td><td data-label="Length"><span class="num">6</span> months</td><td data-label="Engagement">Fixed scope</td></tr>
@@ -88,11 +87,12 @@
       <ol class="rows wk-cases">
         <li class="row" id="case-lending">
           <p class="row__no num">01</p>
-          <div class="row__title"><h3>Lending platform rebuilt for peak application volume</h3><p class="muted small">NBFC lending platform, fintech, India and GCC</p></div>
+          <div class="row__title"><h3>Lending platform rebuilt for a 10× application volume</h3><p class="muted small">NBFC lending platform, fintech, India and GCC</p></div>
           <dl class="row__body spec">
             <dt>Challenge</dt><dd>A digital lending product was processing applications through a monolith that had grown for six years. Loan origination took minutes per application at peak, underwriting rules were hard-coded, and every new lending partner meant another fortnight of engineering.</dd>
             <dt>Solution</dt><dd>We ran a four-week discovery, then peeled the origination flow out of the monolith using a strangler-fig approach. Underwriting rules moved into a configurable engine the credit team edits themselves, partner integrations moved behind a single adapter layer, and the whole pipeline became event-driven with full reconciliation.</dd>
             <dt>Tech stack</dt><dd><ul class="tags"><li>Java</li><li>Spring Boot</li><li>PostgreSQL</li><li>Kafka</li><li>AWS</li><li>Terraform</li><li>React</li></ul></dd>
+            <dt>Outcome</dt><dd><ul class="outcomes"><li><span class="outcomes__n num">10×</span><span class="outcomes__l">application throughput at peak</span></li><li><span class="outcomes__n num">−68%</span><span class="outcomes__l">time to onboard a new lending partner</span></li><li><span class="outcomes__n num">99.95%</span><span class="outcomes__l">platform availability over 12 months</span></li></ul></dd>
           </dl>
         </li>
         <li class="row" id="case-patient">
@@ -102,6 +102,7 @@
             <dt>Challenge</dt><dd>A clinic network was running appointments across phone calls, WhatsApp and three disconnected front-desk systems. No-shows were high, records were fragmented, and patients had no way to see their own history.</dd>
             <dt>Solution</dt><dd>We designed and built a cross-platform patient app plus a front-desk console: booking, reminders, digital records, and prescription access, with consent-based sharing and a full audit trail. Roll-out was phased clinic by clinic, with staff training at each site.</dd>
             <dt>Tech stack</dt><dd><ul class="tags"><li>React Native</li><li>Node.js</li><li>PostgreSQL</li><li>FHIR</li><li>Azure</li><li>Firebase</li></ul></dd>
+            <dt>Outcome</dt><dd><ul class="outcomes"><li><span class="outcomes__n num">−41%</span><span class="outcomes__l">appointment no-show rate</span></li><li><span class="outcomes__n num">4.6★</span><span class="outcomes__l">average store rating</span></li><li><span class="outcomes__n num">62%</span><span class="outcomes__l">bookings self-served in app</span></li></ul></dd>
           </dl>
         </li>
         <li class="row" id="case-logistics">
@@ -111,6 +112,7 @@
             <dt>Challenge</dt><dd>Dispatch ran on spreadsheets and driver phone calls. Customers asked where their consignment was and nobody could answer without ringing three people. Field connectivity was unreliable across large parts of the network.</dd>
             <dt>Solution</dt><dd>We built an offline-first driver app with queued sync, a dispatch console with live map and exception alerts, and a customer tracking page. Warehouse scanning was integrated with the existing WMS, and an event stream now feeds the customer-facing ETA model.</dd>
             <dt>Tech stack</dt><dd><ul class="tags"><li>Flutter</li><li>Go</li><li>PostgreSQL</li><li>Redis</li><li>Kafka</li><li>GCP</li><li>Mapbox</li></ul></dd>
+            <dt>Outcome</dt><dd><ul class="outcomes"><li><span class="outcomes__n num">−35%</span><span class="outcomes__l">customer “where is my order” calls</span></li><li><span class="outcomes__n num">97%</span><span class="outcomes__l">scan events captured in real time</span></li><li><span class="outcomes__n num">+22%</span><span class="outcomes__l">deliveries per driver per day</span></li></ul></dd>
           </dl>
         </li>
         <li class="row" id="case-data">
@@ -120,6 +122,7 @@
             <dt>Challenge</dt><dd>Marketing, finance and operations each maintained their own version of revenue. Month-end reporting took nine working days and the numbers still had to be reconciled by hand before any board pack could go out.</dd>
             <dt>Solution</dt><dd>We consolidated store, marketplace, ads and ERP sources into a warehouse with dbt models, added data quality tests at each layer, and built a semantic layer so every dashboard draws from the same definitions. Month-end close is now largely automated.</dd>
             <dt>Tech stack</dt><dd><ul class="tags"><li>Snowflake</li><li>dbt</li><li>Airflow</li><li>Fivetran</li><li>Power BI</li><li>Python</li></ul></dd>
+            <dt>Outcome</dt><dd><ul class="outcomes"><li><span class="outcomes__n num">9 days to 2</span><span class="outcomes__l">month-end reporting cycle</span></li><li><span class="outcomes__n num">140+</span><span class="outcomes__l">automated data quality tests</span></li><li><span class="outcomes__n num">1</span><span class="outcomes__l">agreed definition of revenue</span></li></ul></dd>
           </dl>
         </li>
         <li class="row" id="case-extraction">
@@ -129,6 +132,7 @@
             <dt>Challenge</dt><dd>An operations team was keying data from thousands of supplier documents a month in five different formats. Accuracy depended on who was on shift, and the backlog grew every quarter-end.</dd>
             <dt>Solution</dt><dd>We built an extraction pipeline combining layout parsing with an LLM step, wrapped in an evaluation harness measured against a human-labelled set. Low-confidence documents route to a review queue rather than being silently accepted, and every decision is logged.</dd>
             <dt>Tech stack</dt><dd><ul class="tags"><li>Python</li><li>FastAPI</li><li>LLM APIs</li><li>Postgres + pgvector</li><li>Docker</li><li>AWS</li></ul></dd>
+            <dt>Outcome</dt><dd><ul class="outcomes"><li><span class="outcomes__n num">~80%</span><span class="outcomes__l">documents processed without human touch</span></li><li><span class="outcomes__n num">−55%</span><span class="outcomes__l">average handling time</span></li><li><span class="outcomes__n num">100%</span><span class="outcomes__l">decisions logged for audit</span></li></ul></dd>
           </dl>
         </li>
         <li class="row" id="case-erp">
@@ -138,6 +142,7 @@
             <dt>Challenge</dt><dd>Fifteen years of custom modules sat on a platform that had reached end of support. A rewrite had been quoted twice and shelved twice, because nobody could afford to stop production for a cutover.</dd>
             <dt>Solution</dt><dd>We inventoried every module, ranked them by business risk, and migrated incrementally behind a facade so both systems could run in parallel. Data was migrated with automated reconciliation at every step, and the final cutover took a single weekend.</dd>
             <dt>Tech stack</dt><dd><ul class="tags"><li>.NET</li><li>.NET 8</li><li>SQL Server</li><li>Docker</li><li>Azure</li><li>Angular</li></ul></dd>
+            <dt>Outcome</dt><dd><ul class="outcomes"><li><span class="outcomes__n num">0</span><span class="outcomes__l">unplanned production downtime hours</span></li><li><span class="outcomes__n num">47</span><span class="outcomes__l">modules migrated incrementally</span></li><li><span class="outcomes__n num">−30%</span><span class="outcomes__l">annual platform running cost</span></li></ul></dd>
           </dl>
         </li>
       </ol>

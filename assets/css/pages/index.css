@@ -41,3 +41,22 @@
 .day__dim .dim { animation: draw var(--dur-long) var(--ease-out) both; }
 @keyframes draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @media (prefers-reduced-motion: reduce) { .day__dim .dim { animation: none; } }
+
+/* the delivery record: four owner-supplied figures across the twelve columns, parted by hairlines */
+.record { border-top: var(--rule-heavy) solid var(--color-rule); }
+.record__title { margin-bottom: var(--space-2xl); }
+.figs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0; }
+.figs > div { display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: var(--space-sm); padding-inline: var(--space-lg); border-left: var(--rule-hair) solid var(--color-rule-2); }
+.figs > div:first-child { padding-left: 0; border-left: 0; }
+.figs > div:last-child { padding-right: 0; }
+.figs dt { font-size: var(--text-sm); color: var(--color-ink-2); max-width: 24ch; }
+.figs dd { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: var(--text-display-s); line-height: 1; text-transform: uppercase; white-space: nowrap; font-variant-numeric: tabular-nums; }
+@media (max-width: 60rem) {
+  .figs { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: var(--space-xl); }
+  .figs > div:nth-child(odd) { padding-left: 0; border-left: 0; }
+}
+@media (max-width: 40rem) {
+  .figs { grid-template-columns: minmax(0, 1fr); }
+  .figs > div { padding: var(--space-md) 0 0; border-left: 0; border-top: var(--rule-hair) solid var(--color-rule-2); }
+  .figs > div:first-child { padding-top: 0; border-top: 0; }
+}
