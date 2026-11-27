@@ -54,7 +54,7 @@
   <section class="page-hero">
     <div class="container page-hero__in">
       <ol class="crumb"><li><a href="index.html">Home</a></li><li aria-current="page">Products</li></ol>
-      <h1>Software we develop and operate in-house</h1>
+      <h1>Software we build and run ourselves</h1>
       <p class="lead">Pathayam: our own product, with published prices and public source.</p>
     </div>
   </section>
@@ -66,8 +66,8 @@
       </div>
       <div class="cols pt-split">
         <div class="span-7 pt-text">
-          <p>Personal budgeting software sold in India is largely imported. It assumes a card-first, statement-first market and consequently handles local conditions poorly: high daily UPI transaction volume, multiple credit cards on differing cycles, and bank statements secured with PAN-derived passwords.</p>
-          <p><strong>Pathayam</strong> is built for that. Every rupee that arrives is assigned to a job before it is spent, so the month is decided in advance rather than reconstructed afterwards. Spending on a card immediately reserves the cash to clear it. Statement PDFs from twelve Indian banks, password-protected ones included, are parsed into a review queue, checked against the closing balance, and a person approves every row before it posts.</p>
+          <p>Most personal budgeting software sold in India is imported. It assumes a card-first, statement-first market and handles local conditions poorly: high daily UPI volume, several credit cards on different billing cycles, and bank statements locked with PAN-derived passwords.</p>
+          <p><strong>Pathayam</strong> is built for these conditions. Every rupee is assigned a job before it is spent, so the month is planned in advance. A card purchase immediately reserves the cash to pay it off. Statement PDFs from twelve Indian banks, including password-protected ones, are parsed into a review queue and checked against the closing balance. A person approves every row before it posts.</p>
           <p class="muted">The name is Malayalam (<span lang="ml">&#3370;&#3364;&#3405;&#3364;&#3390;&#3375;&#3330;</span>), the wooden chest that held a Kerala household&rsquo;s harvest, filled once and drawn from with care.</p>
           <div class="actions">
             <a class="btn btn--primary" href="https://pathayam.app" target="_blank" rel="noopener">Visit pathayam.app</a>
@@ -77,13 +77,13 @@
         <aside class="span-5 fig pt-glance" aria-labelledby="glance-title">
           <h3 id="glance-title">At a glance</h3>
           <ul class="list">
-            <li>Envelope budgeting with rollover of every leftover and every overspend</li>
+            <li>Envelope budgeting that rolls over every leftover and overspend</li>
             <li>Credit cards ranked by what falls due next, with the cash already set aside</li>
             <li>Statement PDFs from twelve Indian banks, plus CSVs, bank alerts, CAS, and YNAB or Actual Budget exports</li>
             <li>Holdings and net worth: FIFO lots, exact cost basis, XIRR; mutual funds, shares, FDs, PPF, EPF and gold</li>
-            <li>Your AIS read into the tax estimate, old and new regimes side by side</li>
+            <li>Your AIS feeds the tax estimate, with old and new regimes side by side</li>
             <li>Ask Claude, ChatGPT or Gemini about your budget through a built-in MCP server, read-only unless you allow changes</li>
-            <li>One container and one SQLite file; no telemetry, ever</li>
+            <li>One container and one SQLite file. No telemetry.</li>
           </ul>
           <ul class="tags" aria-label="Built with">
             <li>TypeScript</li><li>Node 24+</li><li>node:sqlite</li><li>node:http</li><li>Zero runtime dependencies</li><li>PolyForm Noncommercial 1.0.0</li>
@@ -96,20 +96,20 @@
   <section class="sec" aria-labelledby="why-title">
     <div class="container">
       <div class="head">
-        <h2 id="why-title">Three reasons we built it</h2>
+        <h2 id="why-title">Why we built it</h2>
       </div>
       <ol class="rows">
         <li class="row row--wide">
-          <h3 class="row__title">An unaddressed technical problem</h3>
-          <div class="row__body"><p>Indian banking is a genuinely awkward data-integration problem: inconsistent statement formats, password-protected PDFs, UPI volume, no clean API surface. No available product addressed it while allowing the user to retain custody of their own data.</p></div>
+          <h3 class="row__title">An unsolved technical problem</h3>
+          <div class="row__body"><p>Indian banking data is hard to integrate. Statement formats vary, PDFs are password-protected, UPI volume is high and there is no clean API. No existing product solved this while letting users keep custody of their data.</p></div>
         </li>
         <li class="row row--wide">
-          <h3 class="row__title">Accountability for our own decisions</h3>
-          <div class="row__body"><p>Operating a product obliges us to live with our own decisions well beyond the invoice: our migrations, our defect reports, our incident response. Standards applied only to other organisations&rsquo; codebases tend to erode; ours are not permitted to.</p></div>
+          <h3 class="row__title">Living with our own decisions</h3>
+          <div class="row__body"><p>Running a product means we live with our own migrations, defect reports and incidents long after any invoice. Standards applied only to other organisations&rsquo; code tend to slip. Pathayam holds us to ours.</p></div>
         </li>
         <li class="row row--wide">
-          <h3 class="row__title">Independently verifiable evidence</h3>
-          <div class="row__body"><p>Client work is largely subject to non-disclosure. Pathayam is not. The source and the test suite are public, and the engineering can be assessed before any agreement is entered into.</p></div>
+          <h3 class="row__title">Evidence you can check</h3>
+          <div class="row__body"><p>Most client work is under non-disclosure. Pathayam is not. The source and test suite are public, so you can assess our engineering before signing anything.</p></div>
         </li>
       </ol>
     </div>
@@ -119,22 +119,22 @@
     <div class="container">
       <div class="head head--split">
         <h2 id="pricing-title">Licensing and pricing</h2>
-        <p class="lead">Run it yourself free, or have us host it. Hosted instances are set up on request; nothing is charged until a plan is agreed.</p>
+        <p class="lead">Run it yourself for free, or have us host it. Hosted instances are set up on request. Nothing is charged until a plan is agreed.</p>
       </div>
       <div class="register-wrap" role="region" aria-labelledby="pricing-title" tabindex="0">
         <table class="register register--stack pt-plans">
-          <caption>Pathayam plans as published on pathayam.app at the time of writing. Prices exclude 18% GST; the inclusive price is shown beneath. Annual billing gives four or more months free. Hosted instances run on Fly.io in Singapore.</caption>
+          <caption>Pathayam plans as published on pathayam.app at the time of writing. Prices exclude 18% GST. The GST-inclusive price is shown below each. Annual billing gives four or more months free. Hosted instances run on Fly.io in Singapore.</caption>
           <thead><tr><th scope="col">Plan</th><th scope="col">Price</th><th scope="col">Who it is for</th><th scope="col">Status</th></tr></thead>
           <tbody>
             <tr><th scope="row">Self-host</th><td data-label="Price">Free, forever</td><td data-label="Who it is for">One container on your own machine. Every feature, no limits, unlimited household members. You handle backups and updates. Licensed for noncommercial use.</td><td data-label="Status">Available now</td></tr>
             <tr><th scope="row">Solo</th><td data-label="Price"><span class="num">&#8377;249</span> / month<br><span class="small muted">&#8377;294 with GST</span></td><td data-label="Who it is for">One member, the whole budgeting engine. 30-day backup retention.</td><td data-label="Status">On request</td></tr>
             <tr><th scope="row">Household</th><td data-label="Price"><span class="num">&#8377;499</span> / month<br><span class="small muted">&#8377;589 with GST</span></td><td data-label="Who it is for">Up to five members. 90-day backup retention and a monthly verified-restore report. The tier most households want.</td><td data-label="Status">On request</td></tr>
             <tr><th scope="row">Power</th><td data-label="Price"><span class="num">&#8377;1,099</span> / month<br><span class="small muted">&#8377;1,297 with GST</span></td><td data-label="Who it is for">Unlimited members, custom domain, one-year backup retention, same-day support, priority on new bank parsers.</td><td data-label="Status">On request</td></tr>
-            <tr><th scope="row">Forwarding address</th><td data-label="Price"><span class="num">&#8377;100</span> / month<br><span class="small muted">&#8377;118 with GST</span></td><td data-label="Who it is for">Add-on on any hosted tier: bank alerts land in the review queue without inbox access. Nothing forwarded is kept beyond 90 days.</td><td data-label="Status">On request</td></tr>
+            <tr><th scope="row">Forwarding address</th><td data-label="Price"><span class="num">&#8377;100</span> / month<br><span class="small muted">&#8377;118 with GST</span></td><td data-label="Who it is for">Add-on for any hosted tier. Bank alerts go to the review queue without inbox access. Nothing forwarded is kept beyond 90 days.</td><td data-label="Status">On request</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="small muted pt-note">Commercial use of the free tier (running a business&rsquo;s or a freelance practice&rsquo;s books on it) needs a hosted plan or a commercial licence: write to <a href="mailto:hello@flaxvin.tech">hello@flaxvin.tech</a>. The free version is licensed under PolyForm Noncommercial 1.0.0: source available, not open source.</p>
+      <p class="small muted pt-note">Commercial use of the free tier, such as keeping a business&rsquo;s or freelance practice&rsquo;s books, needs a hosted plan or a commercial licence. Write to <a href="mailto:hello@flaxvin.tech">hello@flaxvin.tech</a>. The free version is licensed under PolyForm Noncommercial 1.0.0. It is source available, not open source.</p>
     </div>
   </section>
 
@@ -145,33 +145,33 @@
       </div>
       <div class="pt-elev">
         <div class="pt-elev__col">
-          <h3>Practices established by the product</h3>
+          <h3>Practices from the product</h3>
           <ul class="list">
-            <li>Dependency restraint: every package added is a package to be maintained indefinitely</li>
+            <li>Few dependencies, because every package added must be maintained indefinitely</li>
             <li>Import pipelines that never post unreviewed data</li>
             <li>Reconciling parsed figures against the source&rsquo;s own totals</li>
             <li>Migrations and exports designed for the day a user leaves</li>
           </ul>
         </div>
         <div class="pt-elev__col">
-          <h3>Corresponding client capability</h3>
+          <h3>What clients get</h3>
           <ul class="list">
-            <li>Financial and statement-parsing work we have already shipped once</li>
+            <li>Financial and statement-parsing work we have already shipped</li>
             <li>Self-hosted and data-residency-sensitive builds</li>
             <li>Products that must be exportable and handed over cleanly</li>
-            <li>Test discipline on codebases meant to outlive the engagement</li>
+            <li>Test discipline on codebases built to outlast the engagement</li>
           </ul>
         </div>
       </div>
-      <p class="small muted pt-note">Pathayam is also the reason our fintech and self-hosting work does not start from zero. See <a href="industries.html">Industries</a> for the sectors that benefits, and <a href="work.html">Work</a> for client projects.</p>
+      <p class="small muted pt-note">Pathayam gives our fintech and self-hosting work a head start. See <a href="industries.html">Industries</a> for the sectors this covers and <a href="work.html">Work</a> for client projects.</p>
     </div>
   </section>
 
   <section class="sec band--deep close" aria-labelledby="close-title">
     <div class="container close__in">
       <div class="close__text">
-        <h2 id="close-title">Commissioning comparable work</h2>
-        <p class="lead">Pathayam represents our work where the client is ourselves. To commission a product built to the same standard (owned by you, fully exportable and capable of being handed over), provide us with the requirements.</p>
+        <h2 id="close-title">Commission similar work</h2>
+        <p class="lead">Pathayam is the product we built for ourselves. We build client products to the same standard: owned by you, fully exportable and ready to hand over. Send us your requirements.</p>
       </div>
       <div class="close__side">
         <a class="btn btn--primary" href="contact.html">Start a project</a>
@@ -189,7 +189,7 @@
     </a>
     <div class="ftr__cols">
       <div class="ftr__about">
-        <p>Software development as a service. We design, build, ship and maintain production software for teams that need an engineering partner, not a vendor.</p>
+        <p>Software development as a service. We design, build and maintain production software for client teams.</p>
         <div class="social">
           <a href="https://www.linkedin.com/company/flaxvin" target="_blank" rel="noopener" aria-label="Flaxvin Technologies on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 9h4v12H3zM10 9h3.8v1.7h.05A4.2 4.2 0 0 1 17.6 8.7c4 0 4.7 2.6 4.7 6V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21h-4z"/></svg></a>
           <a href="https://github.com/flaxvin" target="_blank" rel="noopener" aria-label="Flaxvin Technologies on GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></a>
